@@ -21,8 +21,8 @@
   package:
       name: "{{ network_packages }}"
       state: present
-  when:
-    - not network_packages is subset(ansible_facts.packages.keys())
+#  when:
+#    - not network_packages is subset(ansible_facts.packages.keys())
 
 - name: Enable network service
   service:
